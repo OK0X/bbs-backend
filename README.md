@@ -63,6 +63,10 @@ bin\studygolang.exe
 
 * 如果之后有出现页面空白，请查看 error.log 是否有错误
 
+5、问题
+1.发布主题时无法选中节点：是因为没有创建子节点，需要先创建一个节点，并添加至少一个子节点。
+2.redis报错：未配置redis,配置参考config下面的env.sample.ini配置文件，里面还包括邮箱等许多配置项。
+
 ## 参与我们
 
 fork + PR。如果有修改 js 和 css，请执行 gulp （需要先安装 gulp）。注意，Node 版本为：v10.16.2
