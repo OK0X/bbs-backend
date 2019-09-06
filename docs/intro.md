@@ -124,7 +124,15 @@
     所有业务逻辑
 - model 包  
     数据库实体，ORM
-- server 包  
+~~ server 包  
     存放 main
 - util 包  
     一些辅助函数
+
+### 补充
+
+- 上传头像不用七牛云需要更改以下文件
+    http-controller下面的account.go
+    template-user下面的edit.html
+    涉及到的api ：/account/change_avatar 可vscode搜索源代码直接找到以上文件
+
