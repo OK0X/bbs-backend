@@ -14,6 +14,7 @@ import (
 	"github.com/studygolang/studygolang/logic"
 
 	echo "github.com/labstack/echo/v4"
+	"github.com/polaris1119/logger"
 )
 
 type WebController struct{}
@@ -102,6 +103,8 @@ func (WebController) Register(ctx echo.Context) error {
 	// if passwd != pass2 {
 	// 	return fail(ctx, "确认密码不一致", 1)
 	// }
+	logger.Infoln("注册系统账号")
+	logger.Infoln(ctx)
 
 	fields := []string{"username", "email", "passwd"}
 	form := url.Values{}
