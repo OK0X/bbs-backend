@@ -3,9 +3,15 @@ module github.com/studygolang/studygolang
 go 1.12
 
 require (
+	github.com/Chronokeeper/anyxml v0.0.0-20160530174208-54457d8e98c6 // indirect
+	github.com/CloudyKit/fastprinter v0.0.0-20170127035650-74b38d55f37a // indirect
+	github.com/CloudyKit/jet v2.1.2+incompatible // indirect
 	github.com/PuerkitoBio/goquery v1.5.0
 	github.com/Unknwon/goconfig v0.0.0-20190425194916-3dba17dd7b9e // indirect
 	github.com/adamzy/cedar-go v0.0.0-20170805034717-80a9c64b256d // indirect
+	github.com/agrison/go-tablib v0.0.0-20160310143025-4930582c22ee // indirect
+	github.com/agrison/mxj v0.0.0-20160310142625-1269f8afb3b4 // indirect
+	github.com/bndr/gotabulate v1.1.2 // indirect
 	github.com/dchest/captcha v0.0.0-20170622155422-6a29415a8364
 	github.com/facebookgo/clock v0.0.0-20150410010913-600d898af40a // indirect
 	github.com/facebookgo/ensure v0.0.0-20160127193407-b4ab57deab51 // indirect
@@ -48,14 +54,22 @@ require (
 	github.com/qiniu/rpc v0.0.0-20140728010754-30c22466d920 // indirect
 	github.com/robfig/cron v1.2.0
 	github.com/smartystreets/goconvey v0.0.0-20190710185942-9d28bd7c0945 // indirect
+	github.com/sqs/goreturns v0.0.0-20181028201513-538ac6014518 // indirect
 	github.com/ssor/bom v0.0.0-20170718123548-6386211fdfcf // indirect
 	github.com/sundy-li/html2article v0.0.0-20170724020440-d0b6c083441f
+	github.com/tealeg/xlsx v1.0.3 // indirect
 	github.com/tidwall/gjson v1.3.2
 	github.com/twinj/uuid v1.0.0
 	github.com/tylerb/graceful v1.2.15
-	golang.org/x/net v0.0.0-20190607181551-461777fb6f67
+	github.com/xormplus/builder v0.0.0-20190724032102-0ee351fedce9 // indirect
+	github.com/xormplus/core v0.0.0-20190724072625-00f5a85ad6e0 // indirect
+	github.com/xormplus/xorm v0.0.0-20190926190243-42377f593eb1
+	golang.org/x/net v0.0.0-20190620200207-3b0461eec859
 	golang.org/x/oauth2 v0.0.0-20190226205417-e64efc72b421
 	golang.org/x/text v0.3.2
+	golang.org/x/tools v0.0.0-20190929030202-7da961ddcf1a // indirect
+	gopkg.in/flosch/pongo2.v3 v3.0.0-20141028000813-5e81b817a0c4 // indirect
 	gopkg.in/validator.v2 v2.0.0-20180514200540-135c24b11c19 // indirect
+	sourcegraph.com/sqs/goreturns v0.0.0-20181028201513-538ac6014518 // indirect
 	xorm.io/core v0.7.0
 )

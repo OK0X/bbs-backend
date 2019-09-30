@@ -17,4 +17,5 @@ func RegisterRoutes(g *echo.Group) {
 	new(UserController).RegisterRoute(g)
 	new(WechatController).RegisterRoute(g)
 	new(CommentController).RegisterRoute(g)
+	new(WebController).RegisterRoute(g)
 }

@@ -48,6 +48,8 @@ func (self AccountController) RegisterRoute(g *echo.Group) {
 }
 
 func (self AccountController) Register(ctx echo.Context) error {
+	logger.Infoln("-------AccountController Register1")
+	// fmt.Printf("-------AccountController Register2")
 	if _, ok := ctx.Get("user").(*model.Me); ok {
 		return ctx.Redirect(http.StatusSeeOther, "/")
 	}
