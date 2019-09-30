@@ -8,7 +8,6 @@ package app
 
 import (
 	"net/url"
-	"strconv"
 
 	"github.com/studygolang/studygolang/context"
 	. "github.com/studygolang/studygolang/http"
@@ -92,24 +91,24 @@ func (WebController) Login(ctx echo.Context) error {
 
 // Register 注册系统账号
 func (WebController) Register(ctx echo.Context) error {
-	unbindToken := ctx.FormValue("unbind_token")
-	id, ok := ParseToken(unbindToken)
-	if !ok {
-		return fail(ctx, "无效请求!")
-	}
+	// unbindToken := ctx.FormValue("unbind_token")
+	// id, ok := ParseToken(unbindToken)
+	// if !ok {
+	// 	return fail(ctx, "无效请求!")
+	// }
 
-	passwd := ctx.FormValue("passwd")
-	pass2 := ctx.FormValue("pass2")
-	if passwd != pass2 {
-		return fail(ctx, "确认密码不一致", 1)
-	}
+	// passwd := ctx.FormValue("passwd")
+	// pass2 := ctx.FormValue("pass2")
+	// if passwd != pass2 {
+	// 	return fail(ctx, "确认密码不一致", 1)
+	// }
 
-	fields := []string{"username", "email", "passwd", "userInfo"}
+	fields := []string{"username", "email", "passwd"}
 	form := url.Values{}
 	for _, field := range fields {
 		form.Set(field, ctx.FormValue(field))
 	}
-	form.Set("id", strconv.Itoa(id))
+	// form.Set("id", strconv.Itoa(id))
 
 	errMsg, err := logic.DefaultUser.CreateUser(context.EchoContext(ctx), form)
 	if err != nil {
