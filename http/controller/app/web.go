@@ -55,11 +55,11 @@ func (WebController) CheckSession(ctx echo.Context) error {
 
 // Login 通过系统用户登录
 func (WebController) Login(ctx echo.Context) error {
-	unbindToken := ctx.FormValue("unbind_token")
-	id, ok := ParseToken(unbindToken)
-	if !ok {
-		return fail(ctx, "无效请求!")
-	}
+	// unbindToken := ctx.FormValue("unbind_token")
+	// id, ok := ParseToken(unbindToken)
+	// if !ok {
+	// 	return fail(ctx, "无效请求!")
+	// }
 
 	username := ctx.FormValue("username")
 	if username == "" {
@@ -73,19 +73,17 @@ func (WebController) Login(ctx echo.Context) error {
 		return fail(ctx, err.Error())
 	}
 
-	userInfo := ctx.FormValue("userInfo")
+	// 登录成功，种cookie
+	SetLoginCookie(ctx, userLogin.Username)
 
-	wechatUser, err := logic.DefaultWechat.Bind(context.EchoContext(ctx), id, userLogin.Uid, userInfo)
-	if err != nil {
-		return fail(ctx, err.Error())
-	}
+	// userInfo := ctx.FormValue("userInfo")
 
-	data := map[string]interface{}{
-		"token":    GenToken(wechatUser.Uid),
-		"uid":      wechatUser.Uid,
-		"nickname": wechatUser.Nickname,
-		"avatar":   wechatUser.Avatar,
-	}
+	// wechatUser, err := logic.DefaultWechat.Bind(context.EchoContext(ctx), id, userLogin.Uid, userInfo)
+	// if err != nil {
+	// 	return fail(ctx, err.Error())
+	// }
+
+	data := map[string]interface{}{}
 
 	return success(ctx, data)
 }
