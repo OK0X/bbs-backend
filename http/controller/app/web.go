@@ -15,6 +15,8 @@ import (
 
 	echo "github.com/labstack/echo/v4"
 	"github.com/polaris1119/logger"
+	"github.com/studygolang/studygolang/echoutils"
+	"github.com/studygolang/studygolang/model"
 )
 
 type WebController struct{}
@@ -24,6 +26,7 @@ func (self WebController) RegisterRoute(g *echo.Group) {
 	g.GET("/check_session", self.CheckSession)
 	g.POST("/register", self.Register)
 	g.POST("/login", self.Login)
+	g.POST("/articles/new", self.Create)
 }
 
 // CheckSession 校验小程序 session
@@ -117,4 +120,30 @@ func (WebController) Register(ctx echo.Context) error {
 	}
 
 	return success(ctx, nil)
+}
+
+// Create 发布新文章
+func (WebController) Create(ctx echo.Context) error {
+	me := ctx.Get("user").(*model.Me)
+
+	// title := ctx.FormValue("title")
+	// if title == "" || ctx.Request().Method != "POST" {
+	// 	data := map[string]interface{}{"activeArticles": "active"}
+	// 	if logic.NeedCaptcha(me) {
+	// 		data["captchaId"] = captcha.NewLen(util.CaptchaLen)
+	// 	}
+	// 	return render(ctx, "articles/new.html", data)
+	// }
+
+	if ctx.FormValue("content") == "" {
+		return fail(ctx, "内容不能为空", 1)
+	}
+
+	forms, _ := ctx.FormParams()
+	id, err := logic.DefaultArticle.Publish(echoutils.WrapEchoContext(ctx), me, forms)
+	if err != nil {
+		return fail(ctx, "内部服务错误", 2)
+	}
+
+	return success(ctx, map[string]interface{}{"id": id})
 }
