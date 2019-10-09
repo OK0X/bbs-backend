@@ -87,10 +87,10 @@ func (self EmailLogic) SendActivateMail(email, uuid string, isHttps ...bool) {
 	sign := self.genActivateSign(email, uuid, timestamp)
 	param := goutils.Base64Encode(fmt.Sprintf("uuid=%s&timestamp=%d&sign=%s", uuid, timestamp, sign))
 
-	domain := "http://" + WebsiteSetting.Domain
-	if len(isHttps) > 0 && isHttps[0] {
-		domain = "https://" + WebsiteSetting.Domain
-	}
+	domain := "https://" + WebsiteSetting.Domain
+	// if len(isHttps) > 0 && isHttps[0] {
+	// 	domain = "https://" + WebsiteSetting.Domain
+	// }
 
 	activeUrl := fmt.Sprintf("%s/account/activate?param=%s", domain, param)
 
