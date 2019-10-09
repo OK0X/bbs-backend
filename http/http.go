@@ -383,15 +383,15 @@ func executeTpl(ctx echo.Context, tpl *template.Template, data map[string]interf
 		global.App.BaseURL = "http://" + global.App.Domain + "/"
 	}
 
-	staticDomain := ""
-	if global.OnlineEnv() {
-		staticDomain = strings.TrimRight(cdnDomain, "/")
-	}
+	// staticDomain := ""
+	// if global.OnlineEnv() {
+	// 	staticDomain = strings.TrimRight(cdnDomain, "/")
+	// }
 
 	data["app"] = global.App
 	data["is_https"] = isHttps
 	data["cdn_domain"] = cdnDomain
-	data["static_domain"] = staticDomain
+	data["static_domain"] = "https://bbs.ok0x.com"
 	data["is_pro"] = global.OnlineEnv()
 
 	data["online_users"] = map[string]int{"online": logic.Book.Len(), "maxonline": logic.MaxOnlineNum()}
