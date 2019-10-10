@@ -466,6 +466,7 @@ func GenToken(uid int) string {
 	return buffer.String()
 }
 
+//去掉Access-Control-Allow-Origin，统一在nginx配置文件里面设置跨域
 func AccessControl(ctx echo.Context) {
-	ctx.Response().Header().Add("Access-Control-Allow-Origin", "*")
+	// ctx.Response().Header().Add("Access-Control-Allow-Origin", "*")
 }
