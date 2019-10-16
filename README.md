@@ -1,21 +1,16 @@
-# studygolang
+# ok0x社区后台
 
-[![Build Status](https://travis-ci.org/studygolang/studygolang.svg?branch=master)](https://travis-ci.org/studygolang/studygolang)
+[前端请查看该工程](https://github.com/OK0X/bbs-front "ok0x - 前端源码") 源码
 
-[Go语言中文网 - Golang中文社区](https://studygolang.com "Go语言中文网 - Golang中文社区") 源码
 
-网站上线时间：2013-03-15 14:38:09
-
-目前在线运行的分支是 Master。欢迎有兴趣的 gopher 们参与进来，一起构建一个完善的 Go 语言中文网，Go 语言爱好者的学习家园，参与方式请参考：https://studygolang.com/topics/4092
-
-## 本地搭建一个 Go语言中文网
+## 本地搭建一个 
 
 要求 Go 1.11+
 
 1、下载源码到本地某个目录
 
 ```shell
-git clone https://github.com/studygolang/studygolang
+git clone https://github.com/ok0x/studygolang
 ```
 
 2、编译
@@ -75,5 +70,4 @@ fork + PR。如果有修改 js 和 css，请执行 gulp （需要先安装 gulp�
 
 ## 使用该项目搭建的网站
 
-- [Go语言中文网](https://studygolang.com)
-- [Kotlin中国](https://kotlintc.com)
+- [ok0x社区(https://b.ok0x.com)
