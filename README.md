@@ -10,12 +10,12 @@
 1、下载源码到本地某个目录
 
 ```shell
-git clone https://github.com/ok0x/studygolang
+git clone https://github.com/ok0x/bbs-backend
 ```
 
 2、编译
 
-进入 studygolang 项目目录，执行如下命令：
+进入 bbs-backend 项目目录，执行如下命令：
 
 ```shell
 // unix
@@ -24,11 +24,11 @@ make build
 install.bat
 ```
 
-这样便编译好了 studygolang
+这样便编译好了 bbs-backend
 
-3、在 studygolang 源码中的 bin 目录下应该有了 studygolang 可执行文件。
+3、在 bbs-backend 源码中的 bin 目录下应该有了 bbs-backend 可执行文件。
 
-接下来启动 studygolang。
+接下来启动 bbs-backend。
 
 ```shell
 // unix
@@ -46,7 +46,7 @@ bin/studygolang
 bin\studygolang.exe
 ```
 
-一切顺利的话，studygolang 应该就启动了。
+一切顺利的话，bbs-backend 应该就启动了。
 
 4、验证
 
