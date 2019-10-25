@@ -1,6 +1,6 @@
 # ok0x社区后端源码
 
-[前端请查看该工程](https://github.com/OK0X/bbs-front "ok0x - 前端源码") 源码
+[前端源码请查看该工程](https://github.com/OK0X/bbs-front "ok0x - 前端源码") 
 
 
 ## 本地搭建一个 
