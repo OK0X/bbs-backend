@@ -6,6 +6,8 @@
 ## 本地搭建一个 
 
 要求 Go 1.11+
+安装教程参考：(https://studygolang.com/articles/14739)
+
 
 1、下载源码到本地某个目录
 
@@ -57,6 +59,8 @@ bin\studygolang.exe
 接下来你会看到图形化安装界面，一步步照做吧。
 
 * 如果之后有出现页面空白，请查看 error.log 是否有错误
+
+停止：make stop
 
 5、问题
 
